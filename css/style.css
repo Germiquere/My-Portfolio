@@ -6,12 +6,14 @@
     /* ======================COLORS=================== */
 
     --primary-color: hsl(300, 10%, 96%);
-    --secondary-color: hsl(352, 87%, 67%);
+    --secondary-color: #f46275;
     --about-me-color:hsl(300, 54%, 72%);
+    --portfolio-color:hsl(55, 97%, 85%);
     --hs-color: hsl(264, 7%, 27%);
     --p-color:hsl(0, 1%, 31%);
     --invert-primary-color:hsl(264, 7%, 27%);
-
+    --portfolio-color-primary:hsl(300, 10%, 96%);
+    --portfolio-color-primary-inverted:hsl(280, 4%, 16%);
     /* ======================FONTS=================== */
 
     --b-f:'Roboto', sans-serif;
@@ -56,7 +58,6 @@ html{
 body{
     font-family: var(--b-f);
     font-size: var(--normal-font-size);
-    /* background-color: red; */
 }
 body.dark{
     --primary-color:hsl(264, 7%, 27%);
@@ -65,6 +66,9 @@ body.dark{
     --hs-color: hsl(300, 10%, 96%);
     --p-color:hsl(300, 10%, 96%);
     --invert-primary-color:hsl(300, 10%, 96%);
+    --portfolio-color: hsl(280, 4%, 16%);
+    --portfolio-color-primary:hsl(280, 4%, 16%);
+    --portfolio-color-primary-inverted:hsl(300, 10%, 96%);
     
 }
 h1,h2,h3,h4,h5,h6{
@@ -101,19 +105,15 @@ li{
     padding-left: var(--mb-1-5);
     padding-right: var(--mb-1-5);
 }
-.grid{
-    display: grid;
-    gap: 1.5;
-}
 
 /* ====================== HEADER =================== */
 header{
     width: 100%;
-    /* padding: var(--mb-1) 0px; */
     position:absolute;
     top: 0;
     left: 0;
     z-index: 100;
+    padding: var(--mb-0-75) 0px;
 }
 header div.container{
     display: flex; 
@@ -160,6 +160,18 @@ header div nav ul li a.li-about-me::before{
     top: -15px;
     font-family: "FontAwesome";
     content: '\f007';
+    width: 100%;
+    height: 100%;
+    color: var(--invert-primary-color);
+    transition: var(--t-normal);
+
+}
+header div nav ul li a.li-portfolio::before{
+    text-align: center;
+    position: absolute;
+    top: -15px;
+    font-family: "FontAwesome";
+    content: '\f02d';
     width: 100%;
     height: 100%;
     color: var(--invert-primary-color);
@@ -247,6 +259,7 @@ header div nav ul li a.li-contact::before{
 .dark-banner article.container div.banner-text p{
     font-size: var(--big-font-size-p);
     font-family: var(--cursive-f);
+    color: var(--hs-color);
 }
 .dark-banner article.container div.banner-text h1{
     margin-bottom: var(--mb-3);
@@ -274,25 +287,28 @@ header div nav ul li a.li-contact::before{
 }
 #lampara{
     cursor: pointer; 
+    transition: ease-in-out;
+    animation: glow 1.5s infinite alternate-reverse;
+    transform: translateX(-4px);
 }
 @keyframes intermitente{
     0%{
         opacity: 0;
     }
     10%{
-        opacity: 1;
+        opacity: .6;
     }
     15%{
         opacity: 0;
     }
     18%{
-        opacity: 1;
+        opacity: .7;
     }
     20%{
         opacity: 0;
     }
     23%{
-        opacity: 1;
+        opacity: .8;
     }
     26%{
         opacity: 0;
@@ -303,13 +319,21 @@ header div nav ul li a.li-contact::before{
     }
     
 }
+/* @keyframes glow{
+    0%{
+        filter: drop-shadow(0px 0px 0px #f9fad4);
+    }
+    100%{
+        filter: drop-shadow(0px 0px 3px #f9fad4);
+    }
+} */
+
 /* ======================SECTION 2=================== */
  section.about-me{
     position: relative;
     background-color: var(--about-me-color);
     text-align: center;
     z-index: 60;
-    /* height: 100vh; */
     
  }
  section.about-me article.container{
@@ -317,7 +341,6 @@ header div nav ul li a.li-contact::before{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* padding: 0px 30px; */
 
  }
  section.about-me article div.container-about-me-texts{
@@ -332,7 +355,6 @@ header div nav ul li a.li-contact::before{
     margin-bottom: var(--mb-1);
  }
 section.about-me article div div.texts p{
-        /* width: 100%; */
         line-height: 1.5;
         margin-bottom: var(--mb-3);
 }
@@ -361,7 +383,6 @@ section.about-me article div div.texts a::after{
     transition: var(--t-bounce);
     border: 2px solid var(--invert-primary-color) ;
     color: var(--invert-primary-color);
-    /* font-weight: 600; */
 }
 section.about-me article div div.texts a:hover::after{
     transform: translate( 0%,0%);
@@ -380,6 +401,9 @@ section.about-me article div div.texts a:hover::after{
     align-items: center;
     justify-content: center;
 }
+.swiper-slide P{
+    font-size: .9rem;
+}
 .swiper-slide i{
     font-size: 5rem;
     color: var(--invert-primary-color);
@@ -387,10 +411,8 @@ section.about-me article div div.texts a:hover::after{
 }
 .swiper-pagination-bullet{
     position: relative;
-  background-color:var(--secondary-color);
-  bottom: -.5rem;
-  /* width: 10px;
-  height: 50px; */
+    background-color:var(--secondary-color);
+    bottom: -.5rem;
 }
 .swiper-button-prev,.swiper-button-next{
   color: var(--secondary-color);
@@ -406,7 +428,98 @@ section.about-me article div div.texts a:hover::after{
   .skills h3{
     margin: 0;
   }
-  /* ======================SECTION 3=================== */
+
+  /* ====================== PORTFOLIO =================== */
+
+  section.portfolio{
+    background-color: var(--portfolio-color);
+    position: relative;
+    z-index: 55;
+
+  }
+  section.portfolio article{
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--mb-3) ;
+    padding-bottom: var(--mb-3) ;
+  }
+  section.portfolio article h2{
+    margin-bottom: var(--mb-1);
+  }
+  section.portfolio article .card{
+    margin-bottom: var(--mb-3);
+    background-color: var(--portfolio-color);
+    box-shadow: 0.5rem 0.5rem 0 var(--portfolio-color-primary-inverted);
+    border: 2px solid var(--invert-primary-color) ;
+    padding: var(--mb-3) var(--mb-1-5);
+  }
+  section.portfolio article .card div.portfolio-img {
+    margin-bottom: var(--mb-1);
+  }
+  section.portfolio article .card div.portfolio-img img{
+    width: 100%;
+  }
+  section.portfolio article .card div.portfolio-text h3{
+    margin-bottom: var(--mb-1);
+  }
+  section.portfolio article .card div.portfolio-text p{
+    margin-bottom: var(--mb-3);
+  }
+  section.portfolio article .card div.btn{
+    display: flex;
+    gap: var(--mb-1);
+  }
+  section.portfolio article .card div.btn a{
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        width: 120px;
+        height: 35px;
+        line-height: 35px;
+        position: relative;
+        background-color: var(--portfolio-color-primary-inverted);
+  }
+  section.portfolio article .card div.btn .demo::after{
+    position: absolute;
+    content: "Demo";
+    text-align: center;
+    line-height: 35px;
+    top: 0px;
+    left: 0px;
+    transform: translate(0.3rem,-0.6rem);
+    width: 120px;
+    height: 35px;
+    font-size: 1.2rem;
+    background: var(--portfolio-color-primary);
+    transition: var(--t-bounce);
+    border: 2px solid var(--portfolio-color-primary-inverted) ;
+    color: var(--portfolio-color-primary-inverted);
+  }
+  section.portfolio article .card div.btn a:hover::after{
+    transform: translate(0);
+  }
+  section.portfolio article .card div.btn .code::after{
+    position: absolute;
+    content: "Code";
+    text-align: center;
+    line-height: 35px;
+    top: 0px;
+    left: 0px;
+    transform: translate(0.3rem,-0.6rem);
+    width: 120px;
+    height: 35px;
+    font-size: 1.2rem;
+    background: var(--portfolio-color-primary);
+    transition: var(--t-bounce);
+    border: 2px solid var(--portfolio-color-primary-inverted) ;
+    color: var(--portfolio-color-primary-inverted);
+  }
+  
+  
+
+
+
+  /* ====================== FOOTER =================== */
 
   .footer{
     position: sticky;
@@ -414,9 +527,7 @@ section.about-me article div div.texts a:hover::after{
     left: 0;
     width: 100%;
     height: 100vh;
-    /* height: 100vh; */
     background: var(--secondary-color);
-    /* padding: 0px 20%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -427,19 +538,12 @@ section.about-me article div div.texts a:hover::after{
     position: relative;
     background: var(--primary-color);
     width: 80%;
-    /* height: calc(100vh - 50px); */
     margin: 50px 0px;
-    /* max-width: 600px; */
-    /* height: 500px; */
-    /* height: 100%; */
     display: flex;
     flex-direction: column;
-    /* overflow: hidden; */
-    /* justify-content: space-between; */
 }
 .footer-texts{
     width: 100%;
-    /* padding-left: 100px; */
     padding: 0 var(--mb-1);
         display: flex;
         flex-direction: column;
@@ -461,8 +565,6 @@ section.about-me article div div.texts a:hover::after{
 
 .media{
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: start; */
     justify-content: space-evenly;
 }
 .media a{
@@ -481,11 +583,9 @@ section.about-me article div div.texts a:hover::after{
     width: 100%;
 }
 .footer-img svg{
-    /* position: absolute; */
+    
     position: relative;
     bottom: -4px;
-    /* right:-30px; */
-    /* position: static; */
     width: 100%;
     height: 200px;
     
@@ -552,13 +652,14 @@ header nav ul li:hover:before{
 header div nav ul li a.li-about-me::before{
 display: none;
 }
+header div nav ul li a.li-portfolio::before{
+    display: none;
+}
 header div nav ul li a.li-contact::before{
     display: none;
-
 }
 header nav ul li a{
     font-size: var(--h3-font-size);
-    /* line-height: 62px; */
 }
 
 /* ======================SECTION 1=================== */
@@ -587,23 +688,16 @@ main section.dark-banner::before{
     height: 100%;
 }
 .dark-banner article.container svg{
-    /* min-width: 350px; */
-    /* width: 100%; */
     height: 100%;
     width: 100%;
-    /* align-self: flex-start; */
-    /* text-align: left; */
-    /* height: 30%; */
     display:block;
     position: relative;
     order: 1;
 }
 .dark-banner article.container div.banner-text{
-    /* height: 100%;     */
     width: 50%;
     height: 100%;
     order: 2;
-    /* margin-left: var(--mb-2); */
 }
 .toggle{
     background: var(--primary-color);
@@ -611,9 +705,6 @@ main section.dark-banner::before{
 
 /* ======================SECTION 2=================== */
 
-section.about-me{
-    /* height: 100vh; */
-}
 section.about-me article{
     display: flex;
     flex-direction: column;
@@ -643,7 +734,17 @@ section.about-me article div.container-about-me-texts div.skills{
 .swiper {
     width: 350px;
 }
-/* ======================SECTION 3=================== */
+.swiper-slide i{
+    font-size: 4rem;
+}
+
+/* ====================== PORTFOLIO =================== */
+
+section.portfolio article .card{
+    display: flex;
+    gap: 30px;
+}
+/* ====================== FOOTER =================== */
 .footer{
     display: flex;
     align-items: center;
@@ -657,23 +758,17 @@ section.about-me article div.container-about-me-texts div.skills{
     width: 90%;
     margin: 0px;
     height: 60%;
-    /* height: 55%; */
     display: flex;
     flex-direction: row;
     margin: 0 24px;
-    /* justify-content: flex-start; */
-    /* padding-left: 100px; */
-    /* overflow: hidden; */
-    /* justify-content: space-between; */
 }
 .footer-texts{
     
     margin-left: 50px;
-    /* padding: 0px 10px; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 .footer-texts p{
     max-width: 600px;
@@ -688,8 +783,6 @@ section.about-me article div.container-about-me-texts div.skills{
     width: auto;
     bottom: 0px;
     right: 0%;
-    height: 110%;
-    
+    height: 110%; 
 }
-
 }
