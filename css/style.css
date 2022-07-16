@@ -113,7 +113,7 @@ header{
     top: 0;
     left: 0;
     z-index: 100;
-    padding: var(--mb-0-75) 0px;
+    /* padding: var(--mb-0-75) 0px; */
 }
 header div.container{
     display: flex; 
