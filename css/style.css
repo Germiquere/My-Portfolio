@@ -459,7 +459,11 @@ section.about-me article div div.texts a:hover::after{
   }
   section.portfolio article .card div.portfolio-img {
     margin-bottom: var(--mb-1);
+    /* width: 50%; */
   }
+  /* section.portfolio article .card div.portfolio-text {
+    width: 50%;
+  } */
   section.portfolio article .card div.portfolio-img img{
     width: 100%;
   }
@@ -468,7 +472,7 @@ section.about-me article div div.texts a:hover::after{
   }
   section.portfolio article .card div.portfolio-text p{
     margin-bottom: var(--mb-3);
-  }
+}
   section.portfolio article .card div.btn{
     display: flex;
     gap: var(--mb-1);
@@ -748,6 +752,16 @@ section.portfolio article .card{
     display: flex;
     gap: 30px;
 }
+section.portfolio article .card{
+    display: flex;
+}
+section.portfolio article .card div.portfolio-text {
+    width: 50%;
+  }
+  section.portfolio article .card div.portfolio-img{
+    width: 50%;
+  }
+
 /* ====================== FOOTER =================== */
 .footer{
     display: flex;
