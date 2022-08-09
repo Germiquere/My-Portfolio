@@ -1,26 +1,3 @@
-// function bgolor(){
-//     const prueba = document.getElementById('luz');
-//     prueba.style.animation = "intermitente 3s";
-//     prueba.style.opacity = '1';
-    
-// }
-//  function themeChange(){
-//     document.body.classList.toggle('dark');
-//     if(toggleIcon.src.includes('night.png')){
-
-//         toggleIcon.src="assets/sun.png";
-//         toggleText.textContent= "Light Mode";
-//         prueba.style.opacity = '0';
-//         prueba.style.animation = "none";
-//     }
-//     else{
-        
-//         toggleIcon.src= "assets/night.png";
-//         toggleText.textContent= "Dark Mode";
-//         prueba.style.animation = "intermitente 3s";
-//         prueba.style.opacity = '1';
-//     }
-// }
 
 const toggleTheme = document.getElementById("toggle");
 const toggleIcon = document.getElementById("toggle-img");
@@ -33,45 +10,40 @@ const bar = document.getElementById('bar');
 const navLink = document.querySelectorAll('.nav__link');
 const imgMyPortfolio = document.getElementById('img-my-portfolio');
 
-// toggleNav.addEventListener('click',()=>{
-// bar.classList.toggle('show-menu');
-
-// })
-// function linkAction(){
-//         bar.classList.remove('show-menu');
-// }
-// navLink.forEach(n => n.addEventListener('click', linkAction))
-
-// function sideBar(){
-//         if(toggleNav.classList.toggle('active')){
-//                 bar.style.top = "0px";      
-//         }
-//         else{
-//                 bar.style.top = "-300px"; 
-//         }      
-// }
-
 
 function themeChange(){
    if (document.body.classList.toggle('dark')){
-    prueba.style.animation = "intermitente 3s";
-    prueba.style.opacity = '1';
-    indicator.style.left = "0px";
-    imgMyPortfolio.src='./assets/portfolio.png'
+        prueba.style.animation = "intermitente 3s";
+        prueba.style.opacity = '1';
+        indicator.style.left = "0px";
+        imgMyPortfolio.src='./assets/portfolio.png';
+        localStorage.setItem('dark-mode', 'true');
    }
    else{
     
         prueba.style.opacity = '0';
         prueba.style.animation = "none";
         indicator.style.left = "30px";
-        imgMyPortfolio.src='./assets/portfolio-day.png'
+        imgMyPortfolio.src='./assets/portfolio-day.png'; 
+        localStorage.setItem('dark-mode', 'false');
+}
+}
+if(localStorage.getItem('dark-mode') === 'true'){
+     document.body.classList.add('dark');
+     prueba.style.animation = "intermitente 3s";
+        prueba.style.opacity = '1';
+        indicator.style.left = "0px";
+        imgMyPortfolio.src='./assets/portfolio.png';
+}
+else{
+     document.body.classList.remove('dark');
+     prueba.style.opacity = '0';
+        prueba.style.animation = "none";
+        indicator.style.left = "30px";
+        imgMyPortfolio.src='./assets/portfolio-day.png';
+}
 
-}
-}
-toggleTheme.addEventListener('click', themeChange );
+toggleTheme.addEventListener('click', themeChange);
 lampara.addEventListener('click', themeChange);
-
-
-// ======================== swiper =========================
 
 

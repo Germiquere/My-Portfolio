@@ -44,7 +44,7 @@
     /* ====================== TRANSITIONS =================== */
 
     --t-bounce:.4s cubic-bezier(.34,1.56,.64,1);
-    --t-normal: all 300ms ease-in-out;
+    --t-normal: all 100ms ease-in-out;
 }
 
 *{
