@@ -45,6 +45,7 @@
 
     --t-bounce:.4s cubic-bezier(.34,1.56,.64,1);
     --t-normal: all 100ms ease-in-out;
+    --t-bounce-2:.5s cubic-bezier(.2,1.25,.2,1)
 }
 
 *{
@@ -138,17 +139,14 @@ header div nav{
     bottom: 0;
     left: 0;
     right: 0;
-    /* width: 100%; */
     background-color: var(--secondary-color);
     border-top: solid 2px var(--invert-primary-color);
-    /* padding-bottom: env(safe-are-inset-bottom); */
+
 }
 header div nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 0; */
-    /* padding: 0; */
 }
 header div nav ul li{
     margin:0px  var(--mb-0-50);
@@ -216,7 +214,7 @@ header div nav ul li a.li-contact::before{
     background: var(--invert-primary-color);
     border-radius: 50%;
     transform: scale(1.05);
-    transition: .4s cubic-bezier(.34,1.56,.64,1);
+    transition: var(--t-bounce);
 }
 .fa-moon{
     width: 100%;
@@ -331,6 +329,28 @@ header div nav ul li a.li-contact::before{
     100%{
         filter: drop-shadow(0px 0px 3px #f9fad4);
     }
+}
+.scroll-top{
+    text-align: center;
+    position: fixed;
+    bottom: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    width: 20px;
+    font-size: 22px;
+    color: var(--invert-primary-color);
+    z-index: 10000000;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--t-bounce-2);
+    cursor: pointer;
+}
+
+.scroll-top.active{
+    opacity: 1;
+    visibility: visible;
 }
 
 /* ====================== ABOUT-ME =================== */
@@ -459,11 +479,8 @@ section.about-me article div div.texts a:hover::after{
   }
   section.portfolio article .card div.portfolio-img {
     margin-bottom: var(--mb-1);
-    /* width: 50%; */
   }
-  /* section.portfolio article .card div.portfolio-text {
-    width: 50%;
-  } */
+
   section.portfolio article .card div.portfolio-img img{
     width: 100%;
   }
@@ -522,10 +539,6 @@ section.about-me article div div.texts a:hover::after{
     border: 2px solid var(--portfolio-color-primary-inverted) ;
     color: var(--portfolio-color-primary-inverted);
   }
-  
-  
-
-
 
   /* ====================== FOOTER =================== */
 
@@ -710,7 +723,21 @@ main section.dark-banner::before{
 .toggle{
     background: var(--primary-color);
 }
-
+.scroll-top{
+    bottom: 800px;
+    margin-right: unset;
+    margin-left: unset;
+    left: unset;
+    right: 50px;
+    width: 30px;
+    font-size: 30px;
+}
+.scroll-top.active{
+    bottom: 40px;
+}
+.scroll-top:hover{
+    scale: 1.1;
+}
 /* ====================== ABOUT-ME =================== */
 
 section.about-me article{

@@ -42,6 +42,16 @@ else{
         indicator.style.left = "30px";
         imgMyPortfolio.src='./assets/portfolio-day.png';
 }
+window.addEventListener('scroll', ()=>{
+     let scroll = document.querySelector('.scroll-top');
+     scroll.classList.toggle('active',window.scrollY > 800)
+
+})
+function scrollToTop(){
+     window.scrollTo({
+          top:0
+     })
+}
 
 toggleTheme.addEventListener('click', themeChange);
 lampara.addEventListener('click', themeChange);
