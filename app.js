@@ -44,7 +44,7 @@ else{
 }
 window.addEventListener('scroll', ()=>{
      let scroll = document.querySelector('.scroll-top');
-     scroll.classList.toggle('active',window.scrollY > 800)
+     scroll.classList.toggle('active',window.scrollY > 600)
 
 })
 function scrollToTop(){

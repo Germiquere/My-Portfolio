@@ -498,7 +498,7 @@ section.about-me article div div.texts a:hover::after{
         text-align: center;
         position: relative;
         display: inline-block;
-        width: 120px;
+        width: 80px;
         height: 35px;
         line-height: 35px;
         position: relative;
@@ -512,7 +512,7 @@ section.about-me article div div.texts a:hover::after{
     top: 0px;
     left: 0px;
     transform: translate(0.3rem,-0.6rem);
-    width: 120px;
+    width: 80px;
     height: 35px;
     font-size: 1.2rem;
     background: var(--portfolio-color-primary);
@@ -531,7 +531,7 @@ section.about-me article div div.texts a:hover::after{
     top: 0px;
     left: 0px;
     transform: translate(0.3rem,-0.6rem);
-    width: 120px;
+    width: 80px;
     height: 35px;
     font-size: 1.2rem;
     background: var(--portfolio-color-primary);
@@ -614,14 +614,27 @@ section.about-me article div div.texts a:hover::after{
 .contact-me{
     fill: var(--invert-primary-color);
 }
+/* ====================== 360 MEDIA=================== */
+@media screen and (min-width: 360px){
 
+    section.portfolio article .card div.btn a{
+        width: 100px;
+  }
+  section.portfolio article .card div.btn .demo::after{
+
+    width: 100px;
+  }
+
+  section.portfolio article .card div.btn .code::after{
+    width: 100px;   
+  }
+}
 
 /* ======================568 MEDIA=================== */
 @media screen and (min-width: 568px){
     .swiper {
         width: 220px;
     }
-
 }
 /* ======================768 MEDIA=================== */
 @media screen and (min-width: 768px) {
