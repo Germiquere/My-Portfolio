@@ -5,11 +5,9 @@ Presenting my first personal portfolio.As an aspiring professional, this showcas
 ## Technologies
 
 - Javascript
-- Reac
-- Material UI
-- Firebebase
-- React-Router
-- Redux
+- HTML
+- CSS
+
 
 ## DEMO LOGIN CREDENTIALS
 - EMAIL: demoemail@gmail.com
