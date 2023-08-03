@@ -7,9 +7,3 @@ Presenting my first personal portfolio.As an aspiring professional, this showcas
 - Javascript
 - HTML
 - CSS
-
-
-## DEMO LOGIN CREDENTIALS
-- EMAIL: demoemail@gmail.com
-- PASSWORD: admin123456
-
