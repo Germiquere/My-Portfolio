@@ -3,74 +3,74 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@680&display=swap");
 
 :root {
-  /* ======================COLORS=================== */
+    /* ======================COLORS=================== */
 
-  --primary-color: hsl(300, 10%, 96%);
-  --secondary-color: #f46275;
-  --about-me-color: hsl(300, 54%, 72%);
-  --portfolio-color: hsl(55, 97%, 85%);
-  --hs-color: hsl(264, 7%, 27%);
-  --p-color: hsl(0, 1%, 31%);
-  --invert-primary-color: hsl(264, 7%, 27%);
-  --portfolio-color-primary: hsl(300, 10%, 96%);
-  --portfolio-color-primary-inverted: hsl(280, 4%, 16%);
-  /* ======================FONTS=================== */
+    --primary-color: hsl(300, 10%, 96%);
+    --secondary-color: #f46275;
+    --about-me-color: hsl(300, 54%, 72%);
+    --portfolio-color: hsl(55, 97%, 85%);
+    --hs-color: hsl(264, 7%, 27%);
+    --p-color: hsl(0, 1%, 31%);
+    --invert-primary-color: hsl(264, 7%, 27%);
+    --portfolio-color-primary: hsl(300, 10%, 96%);
+    --portfolio-color-primary-inverted: hsl(280, 4%, 16%);
+    /* ======================FONTS=================== */
 
-  --b-f: "Roboto", sans-serif;
-  --hs-f: "Raleway", sans-serif;
-  --cursive-f: "Dancing Script", cursive;
+    --b-f: "Roboto", sans-serif;
+    --hs-f: "Raleway", sans-serif;
+    --cursive-f: "Dancing Script", cursive;
 
-  /* ======================FONT-SIZE=================== */
-  --big-font-size: 2.2rem;
-  --big-font-size-p: 1.4rem;
-  --h1-font-size: 2.4rem;
-  --h2-font-size: 2.2rem;
-  --h3-font-size: 1.6rem;
-  --normal-font-size: 0.93rem;
-  --small-font-size: 0.83rem;
-  --btn-font-size: 1.2rem;
+    /* ======================FONT-SIZE=================== */
+    --big-font-size: 2.2rem;
+    --big-font-size-p: 1.4rem;
+    --h1-font-size: 2.4rem;
+    --h2-font-size: 2.2rem;
+    --h3-font-size: 1.6rem;
+    --normal-font-size: 0.93rem;
+    --small-font-size: 0.83rem;
+    --btn-font-size: 1.2rem;
 
-  /* ======================MARGINS BOTTOM=================== */
+    /* ======================MARGINS BOTTOM=================== */
 
-  --mb-0-25: 0.25rem;
-  --mb-0-50: 0.5rem;
-  --mb-0-75: 0.75rem;
-  --mb-1: 1rem;
-  --mb-1-5: 1.5rem;
-  --mb-2: 2rem;
-  --mb-2-5: 2.5rem;
-  --mb-3: 3rem;
+    --mb-0-25: 0.25rem;
+    --mb-0-50: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
 
-  /* ====================== TRANSITIONS =================== */
+    /* ====================== TRANSITIONS =================== */
 
-  --t-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  --t-normal: all 100ms ease-in-out;
-  --t-bounce-2: 0.5s cubic-bezier(0.2, 1.25, 0.2, 1);
+    --t-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --t-normal: all 100ms ease-in-out;
+    --t-bounce-2: 0.5s cubic-bezier(0.2, 1.25, 0.2, 1);
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 body {
-  font-family: var(--b-f);
-  font-size: var(--normal-font-size);
-  width: 100%;
+    font-family: var(--b-f);
+    font-size: var(--normal-font-size);
+    width: 100%;
 }
 body.dark {
-  --primary-color: hsl(264, 7%, 27%);
-  --secondary-color: hsl(253, 100%, 60%);
-  --about-me-color: hsl(263, 25%, 23%);
-  --hs-color: hsl(300, 10%, 96%);
-  --p-color: hsl(300, 10%, 96%);
-  --invert-primary-color: hsl(300, 10%, 96%);
-  --portfolio-color: hsl(280, 4%, 16%);
-  --portfolio-color-primary: hsl(280, 4%, 16%);
-  --portfolio-color-primary-inverted: hsl(300, 10%, 96%);
+    --primary-color: hsl(264, 7%, 27%);
+    --secondary-color: hsl(253, 100%, 60%);
+    --about-me-color: hsl(263, 25%, 23%);
+    --hs-color: hsl(300, 10%, 96%);
+    --p-color: hsl(300, 10%, 96%);
+    --invert-primary-color: hsl(300, 10%, 96%);
+    --portfolio-color: hsl(280, 4%, 16%);
+    --portfolio-color-primary: hsl(280, 4%, 16%);
+    --portfolio-color-primary-inverted: hsl(300, 10%, 96%);
 }
 h1,
 h2,
@@ -78,755 +78,799 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--hs-color);
-  font-family: var(--hs-f);
-  transition: var(--t-normal);
+    color: var(--hs-color);
+    font-family: var(--hs-f);
+    transition: var(--t-normal);
 }
 h2 {
-  font-size: var(--h2-font-size);
+    font-size: var(--h2-font-size);
 }
 h3 {
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-1);
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-1);
 }
 p {
-  color: var(--p-color);
-  transition: var(--t-normal);
+    color: var(--p-color);
+    transition: var(--t-normal);
 }
 a {
-  text-decoration: none;
-  transition: var(--t-normal);
+    text-decoration: none;
+    transition: var(--t-normal);
 }
 li {
-  list-style: none;
-  transition: var(--t-normal);
+    list-style: none;
+    transition: var(--t-normal);
 }
 
 /* ====================== REUSABLE CLASSES=================== */
 
 .container {
-  max-width: 1100px;
-  padding-left: var(--mb-1-5);
-  padding-right: var(--mb-1-5);
+    max-width: 1100px;
+    padding-left: var(--mb-1-5);
+    padding-right: var(--mb-1-5);
 }
 
 /* ====================== HEADER =================== */
 header {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  padding-top: var(--mb-0-75);
-  padding-bottom: var(--mb-0-75);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding-top: var(--mb-0-75);
+    padding-bottom: var(--mb-0-75);
 }
 header div.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header div.container div.logo a {
-  font-family: var(--cursive-f);
-  font-size: 2.5rem;
-  color: var(--secondary-color);
-  transition: var(--t-normal);
+    font-family: var(--cursive-f);
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    transition: var(--t-normal);
 }
 .fa-moon,
 .fa-sun,
 .indicator,
 .toggle-nav {
-  color: var(--invert-primary-color);
+    color: var(--invert-primary-color);
 }
 
 header div nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--secondary-color);
-  border-top: solid 2px var(--invert-primary-color);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    border-top: solid 2px var(--invert-primary-color);
 }
 header div nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 header div nav ul li {
-  margin: 0px var(--mb-0-50);
-  padding: 1.5rem 0rem 0.5rem;
+    margin: 0px var(--mb-0-50);
+    padding: 1.5rem 0rem 0.5rem;
 }
 header div nav ul li a {
-  position: relative;
-  color: var(--invert-primary-color);
+    position: relative;
+    color: var(--invert-primary-color);
 }
 header div nav ul li a.li-about-me::before {
-  text-align: center;
-  position: absolute;
-  top: -15px;
-  font-family: "FontAwesome";
-  content: "\f007";
-  width: 100%;
-  height: 100%;
-  color: var(--invert-primary-color);
-  transition: var(--t-normal);
+    text-align: center;
+    position: absolute;
+    top: -15px;
+    font-family: "FontAwesome";
+    content: "\f007";
+    width: 100%;
+    height: 100%;
+    color: var(--invert-primary-color);
+    transition: var(--t-normal);
 }
 header div nav ul li a.li-portfolio::before {
-  text-align: center;
-  position: absolute;
-  top: -15px;
-  font-family: "FontAwesome";
-  content: "\f02d";
-  width: 100%;
-  height: 100%;
-  color: var(--invert-primary-color);
-  transition: var(--t-normal);
+    text-align: center;
+    position: absolute;
+    top: -15px;
+    font-family: "FontAwesome";
+    content: "\f02d";
+    width: 100%;
+    height: 100%;
+    color: var(--invert-primary-color);
+    transition: var(--t-normal);
 }
 header div nav ul li a.li-contact::before {
-  text-align: center;
-  position: absolute;
-  top: -15px;
-  font-family: "FontAwesome";
-  content: "\f1d8";
-  width: 100%;
-  height: 100%;
-  color: var(--invert-primary-color);
-  transition: var(--t-normal);
+    text-align: center;
+    position: absolute;
+    top: -15px;
+    font-family: "FontAwesome";
+    content: "\f1d8";
+    width: 100%;
+    height: 100%;
+    color: var(--invert-primary-color);
+    transition: var(--t-normal);
 }
 .toggle {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 60px;
-  height: 30px;
-  border-radius: 30px;
-  background: var(--secondary-color);
-  transition: all 300ms ease-in-out;
-  cursor: pointer;
-  transform: scale(0.9);
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    background: var(--secondary-color);
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    transform: scale(0.9);
 }
 .indicator {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 30px;
-  height: 30px;
-  background: var(--invert-primary-color);
-  border-radius: 50%;
-  transform: scale(1.05);
-  transition: var(--t-bounce);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    background: var(--invert-primary-color);
+    border-radius: 50%;
+    transform: scale(1.05);
+    transition: var(--t-bounce);
 }
 .fa-moon {
-  width: 100%;
-  text-align: left;
-  margin-left: 8px;
+    width: 100%;
+    text-align: left;
+    margin-left: 8px;
 }
 .fa-sun {
-  width: 100%;
-  text-align: right;
-  color: var(--invert-primary-color);
-  margin-right: 8px;
+    width: 100%;
+    text-align: right;
+    color: var(--invert-primary-color);
+    margin-right: 8px;
 }
 .icon {
-  font-size: var(--normal-font-size);
+    font-size: var(--normal-font-size);
 }
 
 /* ====================== BANNER =================== */
 .dark-banner {
-  position: relative;
-  background: var(--primary-color);
-  transition: var(--t-normal);
-  z-index: 50;
+    position: relative;
+    background: var(--primary-color);
+    transition: var(--t-normal);
+    z-index: 50;
 }
 .dark-banner article.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding-top: 50px;
 }
 
 .dark-banner article.container svg {
-  display: none;
+    display: none;
 }
 .dark-banner article.container div.banner-text {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  z-index: 10;
-  text-align: left;
-  justify-content: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    text-align: left;
+    justify-content: center;
 }
 .dark-banner article.container div.banner-text p {
-  font-size: var(--big-font-size-p);
-  font-family: var(--cursive-f);
-  color: var(--hs-color);
+    font-size: var(--big-font-size-p);
+    font-family: var(--cursive-f);
+    color: var(--hs-color);
 }
 .dark-banner article.container div.banner-text h1 {
-  margin-bottom: var(--mb-3);
-  font-size: var(--big-font-size);
-  line-height: 1;
+    margin-bottom: var(--mb-3);
+    font-size: var(--big-font-size);
+    line-height: 1;
 }
 .fun {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: var(--hs-color);
-  transition: var(--t-normal);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: var(--hs-color);
+    transition: var(--t-normal);
 }
 .ger {
-  font-size: 2.8rem;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: var(--hs-color);
-  transition: var(--t-normal);
+    font-size: 2.8rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: var(--hs-color);
+    transition: var(--t-normal);
 }
 #luz {
-  opacity: 1;
-  position: relative;
-  animation: intermitente 3s;
-  transition: var(--t-normal);
+    opacity: 1;
+    position: relative;
+    animation: intermitente 3s;
+    transition: var(--t-normal);
 }
 #lampara {
-  cursor: pointer;
-  transition: ease-in-out;
-  animation: glow 1.5s infinite alternate-reverse;
-  transform: translateX(-4px);
+    cursor: pointer;
+    transition: ease-in-out;
+    animation: glow 1.5s infinite alternate-reverse;
+    transform: translateX(-4px);
 }
 @keyframes intermitente {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.6;
-  }
-  15% {
-    opacity: 0;
-  }
-  18% {
-    opacity: 0.7;
-  }
-  20% {
-    opacity: 0;
-  }
-  23% {
-    opacity: 0.8;
-  }
-  26% {
-    opacity: 0;
-  }
-  29% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    15% {
+        opacity: 0;
+    }
+    18% {
+        opacity: 0.7;
+    }
+    20% {
+        opacity: 0;
+    }
+    23% {
+        opacity: 0.8;
+    }
+    26% {
+        opacity: 0;
+    }
+    29% {
+        opacity: 1;
+    }
 }
 @keyframes glow {
-  0% {
-    filter: drop-shadow(0px 0px 0px #f9fad4);
-  }
-  100% {
-    filter: drop-shadow(0px 0px 3px #f9fad4);
-  }
+    0% {
+        filter: drop-shadow(0px 0px 0px #f9fad4);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 3px #f9fad4);
+    }
 }
 .scroll-top {
-  text-align: center;
-  position: fixed;
-  bottom: 60px;
-  margin-right: auto;
-  margin-left: auto;
-  left: 0;
-  right: 0;
-  width: 20px;
-  font-size: 22px;
-  color: var(--invert-primary-color);
-  z-index: 10000000;
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--t-bounce-2);
-  cursor: pointer;
+    text-align: center;
+    position: fixed;
+    bottom: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    width: 20px;
+    font-size: 22px;
+    color: var(--invert-primary-color);
+    z-index: 10000000;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--t-bounce-2);
+    cursor: pointer;
 }
 
 .scroll-top.active {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 /* ====================== ABOUT-ME =================== */
 section.about-me {
-  position: relative;
-  background-color: var(--about-me-color);
-  text-align: center;
-  z-index: 60;
+    position: relative;
+    background-color: var(--about-me-color);
+    text-align: center;
+    z-index: 60;
 }
 section.about-me article.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 section.about-me article div.container-about-me-texts {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
 }
 section.about-me h2 {
-  margin-bottom: var(--mb-1);
+    margin-bottom: var(--mb-1);
 }
 section.about-me article div div.texts p {
-  line-height: 1.5;
-  margin-bottom: var(--mb-3);
+    line-height: 1.5;
+    margin-bottom: var(--mb-3);
 }
 section.about-me article div div.texts a {
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  width: 140px;
-  height: 40px;
-  line-height: 40px;
-  background: var(--invert-primary-color);
-  margin-bottom: var(--mb-2);
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    background: var(--invert-primary-color);
+    margin-bottom: var(--mb-2);
 }
 section.about-me article div div.texts a::after {
-  position: absolute;
-  content: "Get my CV";
-  text-align: center;
-  line-height: 40px;
-  top: 0px;
-  left: 0px;
-  transform: translate(0.3rem, -0.6rem);
-  width: 140px;
-  height: 40px;
-  font-size: 1.2rem;
-  background: var(--primary-color);
-  transition: var(--t-bounce);
-  border: 2px solid var(--invert-primary-color);
-  color: var(--invert-primary-color);
+    position: absolute;
+    content: "Get my CV";
+    text-align: center;
+    line-height: 40px;
+    top: 0px;
+    left: 0px;
+    transform: translate(0.3rem, -0.6rem);
+    width: 140px;
+    height: 40px;
+    font-size: 1.2rem;
+    background: var(--primary-color);
+    transition: var(--t-bounce);
+    border: 2px solid var(--invert-primary-color);
+    color: var(--invert-primary-color);
 }
 section.about-me article div div.texts a:hover::after {
-  transform: translate(0%, 0%);
-  top: 0;
-  left: 0;
+    transform: translate(0%, 0%);
+    top: 0;
+    left: 0;
 }
 
 .swiper {
-  width: 200px;
-  height: 150px;
+    width: 200px;
+    height: 150px;
 }
 .swiper-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .swiper-slide P {
-  font-size: 0.9rem;
+    font-size: 0.9rem;
 }
 .swiper-slide i {
-  font-size: 5rem;
-  color: var(--invert-primary-color);
-  margin-bottom: var(--mb-0-25);
+    font-size: 5rem;
+    color: var(--invert-primary-color);
+    margin-bottom: var(--mb-0-25);
 }
 .swiper-pagination-bullet {
-  position: relative;
-  background-color: var(--secondary-color);
-  bottom: -0.5rem;
+    position: relative;
+    background-color: var(--secondary-color);
+    bottom: -0.5rem;
 }
 .swiper-button-prev,
 .swiper-button-next {
-  color: var(--secondary-color);
-  opacity: 0.5;
-  transform: scale(0.5);
+    color: var(--secondary-color);
+    opacity: 0.5;
+    transform: scale(0.5);
 }
 .swiper-button-next:hover {
-  opacity: 1;
+    opacity: 1;
 }
 .swiper-button-prev:hover {
-  opacity: 1;
+    opacity: 1;
 }
 .skills h3 {
-  margin: 0;
+    margin: 0;
 }
 
 /* ====================== PORTFOLIO =================== */
 
 section.portfolio {
-  background-color: var(--portfolio-color);
-  position: relative;
-  z-index: 55;
+    background-color: var(--portfolio-color);
+    position: relative;
+    z-index: 55;
 }
 section.portfolio article {
-  display: flex;
-  flex-direction: column;
-  padding-top: var(--mb-3);
-  padding-bottom: var(--mb-3);
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--mb-3);
+    padding-bottom: var(--mb-3);
 }
 section.portfolio article h2 {
-  margin-bottom: var(--mb-1);
+    margin-bottom: var(--mb-1);
 }
 section.portfolio article .card {
-  margin-bottom: var(--mb-3);
-  background-color: var(--portfolio-color);
-  border: 2px solid var(--invert-primary-color);
-  padding: var(--mb-3) var(--mb-1-5);
+    margin-bottom: var(--mb-3);
+    background-color: var(--portfolio-color);
+    border: 2px solid var(--invert-primary-color);
+    padding: var(--mb-3) var(--mb-1-5);
 }
 section.portfolio article .card div.portfolio-img {
-  margin-bottom: var(--mb-1);
+    margin-bottom: var(--mb-1);
 }
 
 section.portfolio article .card div.portfolio-img img {
-  width: 100%;
+    width: 100%;
 }
 section.portfolio article .card div.portfolio-text h3 {
-  margin-bottom: var(--mb-1);
+    margin-bottom: var(--mb-1);
 }
 section.portfolio article .card div.portfolio-text p {
-  margin-bottom: var(--mb-3);
+    margin-bottom: var(--mb-3);
 }
 section.portfolio article .card div.btn {
-  display: flex;
-  gap: var(--mb-1);
+    display: flex;
+    gap: var(--mb-1);
 }
 section.portfolio article .card div.btn a {
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  width: 80px;
-  height: 35px;
-  line-height: 35px;
-  position: relative;
-  background-color: var(--portfolio-color-primary-inverted);
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    background-color: var(--portfolio-color-primary-inverted);
 }
 section.portfolio article .card div.btn .demo::after {
-  position: absolute;
-  content: "Demo";
-  text-align: center;
-  line-height: 35px;
-  top: 0px;
-  left: 0px;
-  transform: translate(0.3rem, -0.6rem);
-  width: 80px;
-  height: 35px;
-  font-size: 1.2rem;
-  background: var(--portfolio-color-primary);
-  transition: var(--t-bounce);
-  border: 2px solid var(--portfolio-color-primary-inverted);
-  color: var(--portfolio-color-primary-inverted);
+    position: absolute;
+    content: "Demo";
+    text-align: center;
+    line-height: 35px;
+    top: 0px;
+    left: 0px;
+    transform: translate(0.3rem, -0.6rem);
+    width: 80px;
+    height: 35px;
+    font-size: 1.2rem;
+    background: var(--portfolio-color-primary);
+    transition: var(--t-bounce);
+    border: 2px solid var(--portfolio-color-primary-inverted);
+    color: var(--portfolio-color-primary-inverted);
 }
 section.portfolio article .card div.btn a:hover::after {
-  transform: translate(0);
+    transform: translate(0);
 }
 section.portfolio article .card div.btn .code::after {
-  position: absolute;
-  content: "Code";
-  text-align: center;
-  line-height: 35px;
-  top: 0px;
-  left: 0px;
-  transform: translate(0.3rem, -0.6rem);
-  width: 80px;
-  height: 35px;
-  font-size: 1.2rem;
-  background: var(--portfolio-color-primary);
-  transition: var(--t-bounce);
-  border: 2px solid var(--portfolio-color-primary-inverted);
-  color: var(--portfolio-color-primary-inverted);
+    position: absolute;
+    content: "Code";
+    text-align: center;
+    line-height: 35px;
+    top: 0px;
+    left: 0px;
+    transform: translate(0.3rem, -0.6rem);
+    width: 80px;
+    height: 35px;
+    font-size: 1.2rem;
+    background: var(--portfolio-color-primary);
+    transition: var(--t-bounce);
+    border: 2px solid var(--portfolio-color-primary-inverted);
+    color: var(--portfolio-color-primary-inverted);
+}
+section.portfolio article .card div.portfolio-text .tecnologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: var(--mb-0-75);
+}
+section.portfolio article .card div.portfolio-text .tecnologies p {
+    margin: 0;
+}
+section.portfolio article .card div.portfolio-text .tecnologies p span {
+    margin: 0;
+    padding-right: 3px;
 }
 
+.btn-component a {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 40px;
+    line-height: 35px;
+    position: relative;
+    background-color: var(--portfolio-color-primary-inverted);
+}
+.btn-component .demo::after {
+    position: absolute;
+    content: "Get my CV";
+    text-align: center;
+    line-height: 40px;
+    top: 0px;
+    left: 0px;
+    transform: translate(0.3rem, -0.6rem);
+    width: 140px;
+    height: 40px;
+    font-size: 1.2rem;
+    background: var(--primary-color);
+    transition: var(--t-bounce);
+    border: 2px solid var(--invert-primary-color);
+    color: var(--invert-primary-color);
+}
+.btn-component .demo:hover::after {
+    transform: translate(0);
+}
 /* ====================== FOOTER =================== */
 
 .footer {
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: var(--secondary-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }
 .footer-container {
-  text-align: center;
-  position: relative;
-  background: var(--primary-color);
-  width: 80%;
-  margin: 50px 0px;
-  display: flex;
-  flex-direction: column;
+    text-align: center;
+    position: relative;
+    background: var(--primary-color);
+    width: 80%;
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
 }
 .footer-texts {
-  width: 100%;
-  padding: 0 var(--mb-1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    padding: 0 var(--mb-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .footer-texts h2 {
-  margin-bottom: var(--mb-1);
+    margin-bottom: var(--mb-1);
 }
 .footer-texts p {
-  max-width: 400px;
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-1);
+    max-width: 400px;
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-1);
 }
 .footer-texts p a {
-  color: var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
 }
 
 .media {
-  display: flex;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
 .media a {
-  color: var(--invert-primary-color);
-  transition: 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: var(--invert-primary-color);
+    transition: 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .media a:hover {
-  color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 .media a i {
-  font-size: var(--mb-2);
-  padding: 0 var(--mb-0-50);
-  margin-bottom: var(--mb-1);
+    font-size: var(--mb-2);
+    padding: 0 var(--mb-0-50);
+    margin-bottom: var(--mb-1);
 }
 .footer-img {
-  width: 100%;
+    width: 100%;
 }
 .footer-img svg {
-  position: relative;
-  bottom: -4px;
-  width: 100%;
-  height: 200px;
+    position: relative;
+    bottom: -4px;
+    width: 100%;
+    height: 200px;
 }
 .contact-me {
-  fill: var(--invert-primary-color);
+    fill: var(--invert-primary-color);
 }
 /* ====================== 360 MEDIA=================== */
 @media screen and (min-width: 360px) {
-  section.portfolio article .card div.btn a {
-    width: 100px;
-  }
-  section.portfolio article .card div.btn .demo::after {
-    width: 100px;
-  }
+    section.portfolio article .card div.btn a {
+        width: 100px;
+    }
+    section.portfolio article .card div.btn .demo::after {
+        width: 100px;
+    }
 
-  section.portfolio article .card div.btn .code::after {
-    width: 100px;
-  }
+    section.portfolio article .card div.btn .code::after {
+        width: 100px;
+    }
+    section.portfolio article .card div.portfolio-text .tecnologies {
+    }
 }
 
 /* ======================568 MEDIA=================== */
 @media screen and (min-width: 568px) {
-  .swiper {
-    width: 220px;
-  }
+    .swiper {
+        width: 220px;
+    }
 }
 /* ======================768 MEDIA=================== */
 @media screen and (min-width: 768px) {
-  :root {
-    --big-font-size: 2.5rem;
-    --big-font-size-p: 1.5rem;
-    --h1-font-size: 2.4rem;
-    --h2-font-size: 2.2rem;
-    --h3-font-size: 1.6rem;
-    --normal-font-size: 0.93rem;
-    --small-font-size: 0.83rem;
-    --btn-font-size: 1.2rem;
-  }
-  .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-  /* ====================== HEADER =================== */
-  header div nav {
-    position: static;
-    width: auto;
-    background-color: transparent;
-    border-top: none;
-  }
-  header div nav ul li {
-    position: relative;
-    overflow: hidden;
-    padding: 0px;
-    margin: 0px 30px;
-  }
+    :root {
+        --big-font-size: 2.5rem;
+        --big-font-size-p: 1.5rem;
+        --h1-font-size: 2.4rem;
+        --h2-font-size: 2.2rem;
+        --h3-font-size: 1.6rem;
+        --normal-font-size: 0.93rem;
+        --small-font-size: 0.83rem;
+        --btn-font-size: 1.2rem;
+    }
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    /* ====================== HEADER =================== */
+    header div nav {
+        position: static;
+        width: auto;
+        background-color: transparent;
+        border-top: none;
+    }
+    header div nav ul li {
+        position: relative;
+        overflow: hidden;
+        padding: 0px;
+        margin: 0px 30px;
+    }
 
-  header nav ul li::before {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    transform: translateX(-150px);
-    width: 100%;
-    height: 2px;
-    background: var(--primary-color);
-    transition: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-    opacity: 0;
-  }
-  header nav ul li:hover:before {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-  header div nav ul li a.li-about-me::before {
-    display: none;
-  }
-  header div nav ul li a.li-portfolio::before {
-    display: none;
-  }
-  header div nav ul li a.li-contact::before {
-    display: none;
-  }
-  header nav ul li a {
-    font-size: var(--h3-font-size);
-  }
+    header nav ul li::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        transform: translateX(-150px);
+        width: 100%;
+        height: 2px;
+        background: var(--primary-color);
+        transition: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        opacity: 0;
+    }
+    header nav ul li:hover:before {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    header div nav ul li a.li-about-me::before {
+        display: none;
+    }
+    header div nav ul li a.li-portfolio::before {
+        display: none;
+    }
+    header div nav ul li a.li-contact::before {
+        display: none;
+    }
+    header nav ul li a {
+        font-size: var(--h3-font-size);
+    }
 
-  /* ====================== BANNER =================== */
+    /* ====================== BANNER =================== */
 
-  main section.dark-banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 70%;
-    height: 100%;
-    transition: all 300ms ease-in-out;
-    background: var(--secondary-color);
-  }
-  .dark-banner article.container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 50px;
-    gap: 20px;
-  }
-  .svg-btn {
-    width: 50%;
-    height: 100%;
-  }
-  .dark-banner article.container svg {
-    height: 100%;
-    width: 100%;
-    display: block;
-    position: relative;
-    order: 1;
-  }
-  .dark-banner article.container div.banner-text {
-    width: 50%;
-    height: 100%;
-    order: 2;
-  }
-  .toggle {
-    background: var(--primary-color);
-  }
-  .scroll-top {
-    bottom: 800px;
-    margin-right: unset;
-    margin-left: unset;
-    left: unset;
-    right: 50px;
-    width: 30px;
-    font-size: 30px;
-  }
-  .scroll-top.active {
-    bottom: 40px;
-  }
-  .scroll-top:hover {
-    scale: 1.1;
-  }
-  /* ====================== ABOUT-ME =================== */
+    main section.dark-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        transition: all 300ms ease-in-out;
+        background: var(--secondary-color);
+    }
+    .dark-banner article.container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 50px;
+        gap: 20px;
+    }
+    .svg-btn {
+        width: 50%;
+        height: 100%;
+    }
+    .dark-banner article.container svg {
+        height: 100%;
+        width: 100%;
+        display: block;
+        position: relative;
+        order: 1;
+    }
+    .dark-banner article.container div.banner-text {
+        width: 50%;
+        height: 100%;
+        order: 2;
+    }
+    .toggle {
+        background: var(--primary-color);
+    }
+    .scroll-top {
+        bottom: 800px;
+        margin-right: unset;
+        margin-left: unset;
+        left: unset;
+        right: 50px;
+        width: 30px;
+        font-size: 30px;
+    }
+    .scroll-top.active {
+        bottom: 40px;
+    }
+    .scroll-top:hover {
+        scale: 1.1;
+    }
+    /* ====================== ABOUT-ME =================== */
 
-  section.about-me article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-    width: 100%;
-    height: 100%;
-  }
-  section.about-me article div.container-about-me-texts {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-align: left;
-    width: 100%;
-  }
-  section.about-me article div.container-about-me-texts div.texts {
-    width: 100%;
-  }
-  section.about-me article div.container-about-me-texts div.texts p {
-    max-width: 576px;
-  }
-  section.about-me article div.container-about-me-texts div.skills {
-    width: 100%;
-    text-align: center;
-  }
-  .swiper {
-    width: 350px;
-  }
-  .swiper-slide i {
-    font-size: 4rem;
-  }
+    section.about-me article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        width: 100%;
+        height: 100%;
+    }
+    section.about-me article div.container-about-me-texts {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+    }
+    section.about-me article div.container-about-me-texts div.texts {
+        width: 100%;
+    }
+    section.about-me article div.container-about-me-texts div.texts p {
+        max-width: 576px;
+    }
+    section.about-me article div.container-about-me-texts div.skills {
+        width: 100%;
+        text-align: center;
+    }
+    .swiper {
+        width: 350px;
+    }
+    .swiper-slide i {
+        font-size: 4rem;
+    }
 
-  /* ====================== PORTFOLIO =================== */
+    /* ====================== PORTFOLIO =================== */
 
-  section.portfolio article .card {
-    display: flex;
-    gap: 30px;
-  }
-  section.portfolio article .card {
-    display: flex;
-  }
-  section.portfolio article .card div.portfolio-text {
-    width: 50%;
-  }
-  section.portfolio article .card div.portfolio-img {
-    width: 50%;
-  }
+    section.portfolio article .card {
+        display: flex;
+        gap: 30px;
+    }
+    section.portfolio article .card {
+        display: flex;
+    }
+    section.portfolio article .card div.portfolio-text {
+        width: 50%;
+    }
+    section.portfolio article .card div.portfolio-img {
+        width: 50%;
+    }
 
-  /* ====================== FOOTER =================== */
-  .footer {
-    display: flex;
-    align-items: center;
-  }
-  .footer-container {
-    text-align: left;
-    position: relative;
-    background: var(--primary-color);
-    max-width: 1052px;
-    width: 90%;
-    margin: 0px;
-    height: 60%;
-    display: flex;
-    flex-direction: row;
-    margin: 0 24px;
-  }
-  .footer-texts {
-    margin-left: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .footer-texts p {
-    max-width: 600px;
-    font-size: var();
-    margin-bottom: var(--mb-1);
-  }
-  .footer-img {
-    width: 80%;
-  }
-  .footer-img svg {
-    position: absolute;
-    width: auto;
-    bottom: 0px;
-    right: -30px;
-    height: 110%;
-  }
+    /* ====================== FOOTER =================== */
+    .footer {
+        display: flex;
+        align-items: center;
+    }
+    .footer-container {
+        text-align: left;
+        position: relative;
+        background: var(--primary-color);
+        max-width: 1052px;
+        width: 90%;
+        margin: 0px;
+        height: 60%;
+        display: flex;
+        flex-direction: row;
+        margin: 0 24px;
+    }
+    .footer-texts {
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .footer-texts p {
+        max-width: 600px;
+        font-size: var();
+        margin-bottom: var(--mb-1);
+    }
+    .footer-img {
+        width: 80%;
+    }
+    .footer-img svg {
+        position: absolute;
+        width: auto;
+        bottom: 0px;
+        right: -30px;
+        height: 110%;
+    }
 }
